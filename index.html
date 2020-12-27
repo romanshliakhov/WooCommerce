@@ -1,0 +1,400 @@
+<!-- <?php	
+	require "./assets/less/lessc.inc.php";	
+	function autoCompileLess($inputFile, $outputFile) {
+	  // load the cache
+	  $cacheFile = $inputFile.".cache";
+	  if (file_exists($cacheFile)) {
+		$cache = unserialize(file_get_contents($cacheFile));
+	  } else {
+		$cache = $inputFile;
+	  }
+	  $less = new lessc;
+	  $newCache = $less->cachedCompile($cache);
+	  if (!is_array($cache) || $newCache["updated"] > $cache["updated"]) {
+		file_put_contents($cacheFile, serialize($newCache));
+		file_put_contents($outputFile, $newCache['compiled']);
+	  }
+	}
+	autoCompileLess('./assets/less/style.less', './assets/css/style.css');
+// class="col-xs-6 wow fadeIn" data-wow-delay="0.3s" data-wow-duration="0.6s"
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Woo-landing</title>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="assets/fonts/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Кнопка Мобильного Меню -->
+		<div id="mobile-menu">
+			<div class="block">
+				<ul>
+					<li class="m1"><span>Sell</span></li>
+					<li class="m2"><span>Marketplace</span></li>
+					<li class="m3"><span>Community</span></li>
+					<li class="m4"><span>Develop</span></li>
+					<li class="m5"><span>Resources</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Кнопка Мобильного Меню -->	
+		<section class="sec1">
+			<div class="header">
+				<div class="container-fluid">
+					<div class="block">
+						<div class="left-block">
+							<a class="logo" href="">
+								<img src="assets/img/logo.png" alt="logo">
+							</a>
+							<ul class="mnone">
+								<li class="m1"><span>Sell</span></li>
+								<li class="m2"><span>Marketplace</span></li>
+								<li class="m3"><span>Community</span></li>
+								<li class="m4"><span>Develop</span></li>
+								<li class="m5"><span>Resources</span></li>
+							</ul>
+						</div>
+						<div class="right-block">
+							<a class="mnone" href="">Log In</a>
+							<button class="mnone md-trigger" data-modal="modal-1">Get Started</button>
+							<img src="assets/img/icon-search.svg" alt="">
+						</div>
+						<!-- Кнопка Мобильного Бургер Меню -->
+						<button id="burger-menu">
+							<div class="box box_item1"></div>
+							<div class="box box_item2"></div>
+							<div class="box box_item3"></div>
+						</button>
+						<!-- Кнопка Мобильного Бургер Меню -->
+					</div>
+				</div>
+			</div>
+			<div class="block-info">
+				<div class="container">
+					<div class="info-block">
+						<div class="t1">Building exactly the eCommerce website you want.</div>
+						<div class="t2">WooCommerce is a customizable, open-source eCommerce platform built on
+							WordPress.<br> Get started quickly and make your way.</div>
+						<div class="t3">
+							<button>Start a New Store</button> or <a href="">Customize & Extend ›</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="img-group">
+				<div class="container">
+					<div class="t1">Your eCommerce<br> made simple</div>
+					<div class="block">
+						<div class="block-item">
+							<div class="img">
+								<img class="bg-img bg-img_1" src="assets/img/s11.png" alt="">
+								<img class="zindex-1" src="assets/img/s11_1.png" alt="">
+							</div>
+							<div class="title">All You Need to Start</div>
+							<div class="text">Add WooCommerce plugin to any WordPress site and set up a new store in
+								minutes.</div>
+							<a href="#">Ecommerce for Wordpress ›</a>
+						</div>
+						<div class="block-item">
+							<div class="img">
+								<img class="bg-img" src="assets/img/s12.png" alt="">
+								<img class="zindex-2" src="assets/img/s12_1.png" alt="">
+							</div>
+							<div class="title">Customize and Extend</div>
+							<div class="text">From subscriptions to gym classes to luxury cars, WooCommerce is fully
+								customizable.</div>
+							<a href="#">Browse Extensions ›</a>
+						</div>
+						<div class="block-item">
+							<div class="img">
+								<img class="bg-img" src="assets/img/s13.png" alt="">
+								<img class="zindex-3" src="assets/img/s13_1.png" alt="">
+							</div>
+							<div class="title">Active Community</div>
+							<div class="text">WooCommerce is one of the fastest-growing eCommerce communities.</div>
+							<a href="#">Check our Forums ›</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sec2">
+			<div class="container">
+				<div class="block">
+					<div class="block_item">
+						<div class="img bef">
+							<img src="assets/img/s21.png" alt="">
+						</div>
+						<div class="text">
+							<div class="t1">Develop<br> Without Limits</div>
+							<div class="t2">WooCommerce is developer friendly, too. Built with a REST API, WooCommerce
+								is scalable and can integrate with virtually any service. Design a complex store from
+								scratch, extend a store for a client, or simply add a single product to a WordPress
+								site — your store, your way.</div>
+							<a href="#">Read the Documentation</a>
+						</div>
+					</div>
+					<div class="block_item rev">
+						<div class="img">
+							<img src="assets/img/s22.png" alt="">
+						</div>
+						<div class="text">
+							<div class="t1">Know our<br> Global Community</div>
+							<div class="t2">WooCommerce is one of the fastest-growing eCommerce communities. We’re proud
+								that the helpfulness of the community and a wealth of online resources are frequently
+								cited as reasons our users love it. There are 80+ meetups worldwide!</div>
+							<a href="#">Read the Documentation</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sec3">
+			<div class="container">
+				<div class="t1">Trusted by Agencies<br> & Store Owners</div>
+
+				<div class="slider-block">
+					<div class="slider swiper-wrapper">
+						<div class="swiper-slide">
+							<p>No other eCommerce platform allows people to start for free and grow their store as
+								their
+								business grows. More importantly, WooCommerce doesn't charge you a portion of your
+								profits as your business grows!</p>
+						</div>
+						<div class="swiper-slide">
+							<p>2No other eCommerce platform allows people to start for free and grow their store as
+								their
+								business grows. More importantly, WooCommerce doesn't charge you a portion of your
+								profits as your business grows!</p>
+						</div>
+						<div class="swiper-slide">
+							<p>3No other eCommerce platform allows people to start for free and grow their store as
+								their
+								business grows. More importantly, WooCommerce doesn't charge you a portion of your
+								profits as your business grows!</p>
+						</div>
+						<div class="swiper-slide">
+							<p>4No other eCommerce platform allows people to start for free and grow their store as
+								their
+								business grows. More importantly, WooCommerce doesn't charge you a portion of your
+								profits as your business grows!</p>
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="slider-nav">
+					<div class="slider-nav_prev">
+						<svg width="52" height="25" viewBox="0 0 52 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M38.5445 0.13633C38.3276 0.226334 38.1306 0.358244 37.9648 0.524505C37.7985 0.690347 37.6666 0.887359 37.5766 1.10426C37.4866 1.32116 37.4402 1.55368 37.4402 1.78852C37.4402 2.02335 37.4866 2.25587 37.5766 2.47277C37.6666 2.68967 37.7985 2.88669 37.9648 3.05253L45.6302 10.7151H1.78533C1.31183 10.7151 0.857724 10.9032 0.52291 11.238C0.188097 11.5728 0 12.0269 0 12.5004C0 12.9739 0.188097 13.4281 0.52291 13.7629C0.857724 14.0977 1.31183 14.2858 1.78533 14.2858H45.6303L37.9648 21.9484C37.6295 22.2836 37.4412 22.7383 37.4412 23.2124C37.4412 23.6865 37.6295 24.1412 37.9648 24.4764C38.3 24.8117 38.7547 25 39.2288 25C39.7029 25 40.1575 24.8117 40.4928 24.4764L51.2047 13.7645C51.371 13.5986 51.5029 13.4016 51.5929 13.1847C51.6829 12.9678 51.7292 12.7353 51.7292 12.5005C51.7292 12.2656 51.6829 12.0331 51.5929 11.8162C51.5029 11.5993 51.371 11.4023 51.2047 11.2365L40.4928 0.524505C40.3269 0.358244 40.1299 0.226334 39.913 0.13633C39.6961 0.046327 39.4636 0 39.2288 0C38.9939 0 38.7614 0.046327 38.5445 0.13633Z"
+								fill="black" />
+						</svg>
+					</div>
+					<div class="slider-nav_next"><svg width="52" height="25" viewBox="0 0 52 25" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M38.5445 0.13633C38.3276 0.226334 38.1306 0.358244 37.9648 0.524505C37.7985 0.690347 37.6666 0.887359 37.5766 1.10426C37.4866 1.32116 37.4402 1.55368 37.4402 1.78852C37.4402 2.02335 37.4866 2.25587 37.5766 2.47277C37.6666 2.68967 37.7985 2.88669 37.9648 3.05253L45.6302 10.7151H1.78533C1.31183 10.7151 0.857724 10.9032 0.52291 11.238C0.188097 11.5728 0 12.0269 0 12.5004C0 12.9739 0.188097 13.4281 0.52291 13.7629C0.857724 14.0977 1.31183 14.2858 1.78533 14.2858H45.6303L37.9648 21.9484C37.6295 22.2836 37.4412 22.7383 37.4412 23.2124C37.4412 23.6865 37.6295 24.1412 37.9648 24.4764C38.3 24.8117 38.7547 25 39.2288 25C39.7029 25 40.1575 24.8117 40.4928 24.4764L51.2047 13.7645C51.371 13.5986 51.5029 13.4016 51.5929 13.1847C51.6829 12.9678 51.7292 12.7353 51.7292 12.5005C51.7292 12.2656 51.6829 12.0331 51.5929 11.8162C51.5029 11.5993 51.371 11.4023 51.2047 11.2365L40.4928 0.524505C40.3269 0.358244 40.1299 0.226334 39.913 0.13633C39.6961 0.046327 39.4636 0 39.2288 0C38.9939 0 38.7614 0.046327 38.5445 0.13633Z"
+								fill="black" />
+						</svg>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sec4">
+			<div class="container">
+				<div class="t1">Supported by real people</div>
+				<div class="t2">Our team of Happiness Engineers works remotely from 58 countries providing<br> customer
+					support across multiple time zones.</div>
+
+				<div class="img">
+					<img src="assets/img/s4.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="sec5">
+			<div class="container">
+				<div class="block-item">
+					<div class="block-text">WooCommerce - <span>the most customizable eCommerce platform</span> for
+						building
+						<span>your online business.</span>
+					</div>
+
+					<button>
+						<a href="#">Get Started</a>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="container">
+					<div class="footer-top">
+						<div class="block">
+							<div class="block-item block-item_day">30 day <span>money back guarantee</span></div>
+							<div class="block-item block-item_sup"><span>Support</span> teams across the world</div>
+							<div class="block-item block-item_save"><span>Safe & Secure</span> online payment</div>
+						</div>
+					</div>
+
+					<div class="footer-mid">
+						<div class="img">
+							<a href="#">
+								<img src="assets/img/logo2.png" alt="">
+							</a>
+						</div>
+					</div>
+
+					<div class="footer-nav">
+						<div class="container">
+							<div class="block">
+								<div class="block-item">
+									<div class="block-item_title">Who we Are</div>
+									<ul>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Team</a></li>
+										<li><a href="#">Work With Us</a></li>
+									</ul>
+								</div>
+								<div class="block-item">
+									<div class="block-item_title">Woocommerce</div>
+									<ul>
+										<li><a href="#">Features</a></li>
+										<li><a href="#">Payments</a></li>
+										<li><a href="#">Marketing</a></li>
+										<li><a href="#">Shipping</a></li>
+										<li><a href="#">Extension Store</a></li>
+										<li><a href="#">eCommerce blog</a></li>
+										<li><a href="#">Development blog</a></li>
+										<li><a href="#">Ideas board</a></li>
+										<li><a href="#">Mobile App</a></li>
+										<li><a href="#">Community</a></li>
+										<li><a href="#">Style Guide</a></li>
+										<li><a href="#">Email Newsletter</a></li>
+									</ul>
+								</div>
+								<div class="block-item">
+									<div class="block-item_title">Other products</div>
+									<ul>
+										<li><a href="#">Storefront</a></li>
+										<li><a href="#">WooSlider</a></li>
+										<li><a href="#">Sensei</a></li>
+										<li><a href="#">Sensei Extensions</a></li>
+									</ul>
+								</div>
+								<div class="block-item">
+									<div class="block-item_title">Support</div>
+									<ul>
+										<li><a href="#">Documentation</a></li>
+										<li><a href="#">Customizations</a></li>
+										<li><a href="#">Support Policy</a></li>
+										<li><a href="#">Contact</a></li>
+										<li><a href="#">COVID-19 Resources</a></li>
+										<li><a href="#">Privacy Notice for</a></li>
+										<li><a href="#">California Users</a></li>
+									</ul>
+								</div>
+								<div class="block-item">
+									<div class="block-item_title">We recommend</div>
+									<ul>
+										<li><a href="#">WooExperts</a></li>
+										<li><a href="#">Hosting Solutions</a></li>
+										<li><a href="#">Pre-sales FAQ</a></li>
+										<li><a href="#">Success Stories</a></li>
+										<li><a href="#">Design Feedback Group</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bot">
+				<div class="container">
+					<div class="block">
+						<div class="block-social">
+							<a href="#"><img src="assets/img/twitter.svg" alt=""></a>
+							<a href="#"><img src="assets/img/fb.svg" alt=""></a>
+							<a href="#"><img src="assets/img/rss.svg" alt=""></a>
+							<a href="#"><img src="assets/img/inst.svg" alt=""></a>
+						</div>
+						<div class="block-copy">COPYRIGHT WOOCOMMERCE 2020 - <a href="#"><span>TERMS & CONDITIONS
+									PRIVACY
+									POLICY</span></a></div>
+						<div class="block-brand">
+							<a href="#"><img src="assets/img/f4_3.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="md-modal md-effect-16" id="modal-1">
+		<div class="md-content">
+			<h3>Registration</h3>
+			<div>
+				<div class="form">
+					<form action="sender.php" method="post">
+						<div class="inb">
+							<input type="text" name="login" placeholder="Login" required>
+						</div>
+						<div class="inb">
+							<input type="email" name="email" placeholder="Example@gmail.com" required>
+						</div>
+						<div class="inb">
+							<input type="text" name="phone" placeholder="Phone number" required>
+						</div>
+						<input type="hidden" value="Registration form">
+						<button class="send-form" type="button">Send</button>
+						<p style="opacity:0" class="show-message">Thanks for registration</p>
+					</form>
+				</div>
+				<button class="md-close"></button>
+			</div>
+		</div>
+	</div>
+	<div class="md-overlay"></div><!-- the overlay element -->
+
+	<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+	<script src="./assets/js/classie.js"></script>
+	<script src="./assets/js/modalEffects.js"></script>
+
+	<!-- for the blur effect -->
+	<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+	<script>
+		// this is important for IEs
+		var polyfilter_scriptpath = './assets/js/';
+
+	</script>
+	<script src="assets/js/cssParser.js"></script>
+	<script src="assets/js/css-filters-polyfill.js"></script>
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
